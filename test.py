@@ -60,5 +60,23 @@
 # content=[i.rstrip("\n")for i in content]
 # print(content)
 # file.close()
+#
+# file=open("example2.txt",'w')
+# file.write("line1\n")
+# file.close()
+# file=open("example2.txt",'a')
+# file.write("line2")
+# file.close()
+# l=["line1\n","line2\n","line3\n"]
+# file=open("example2.txt",'w')
+# for item in l:
+#     file.write(item)
+# file.close()
 
+# with open("example3.txt",'a+') as file:
+#     file.seek(0)
+#     content=file.read()
+#     file.write("\nline6")
+#
+# print(content)
 
