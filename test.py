@@ -79,4 +79,33 @@
 #     file.write("\nline6")
 #
 # print(content)
+# import os
+#
+# print(os.listdir())
 
+import datetime
+# now=datetime.datetime.now()
+#
+# yesterday=datetime.datetime(2018,4,18,0,0,0,0)
+#
+# print(now-yesterday)
+#
+# filename=datetime.datetime.now()
+#
+# def createFile():
+#     with open(filename.strftime("%B-%Y-%d")+".txt", 'w') as file:
+#         file.write("")
+#
+# createFile()
+#
+# after=now+datetime.timedelta(days=2)
+# print(after)
+
+import time
+lst=[]
+for i in range(5):
+    lst.append(datetime.datetime.now())
+    time.sleep(1)
+
+for i in lst:
+    print(i)
