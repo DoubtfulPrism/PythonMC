@@ -83,7 +83,7 @@
 #
 # print(os.listdir())
 
-import datetime
+#import datetime
 # now=datetime.datetime.now()
 #
 # yesterday=datetime.datetime(2018,4,18,0,0,0,0)
@@ -100,12 +100,35 @@ import datetime
 #
 # after=now+datetime.timedelta(days=2)
 # print(after)
+#
+# import time
+# lst=[]
+# for i in range(5):
+#     lst.append(datetime.datetime.now())
+#     time.sleep(1)
+#
+# for i in lst:
+#     print(i)
 
-import time
-lst=[]
-for i in range(5):
-    lst.append(datetime.datetime.now())
-    time.sleep(1)
+import pandas, numpy, xlrd
+#
+# df1=pandas.DataFrame([[2,4,6],[10,20,30]],columns=["price","age","value"],index=["first","second"])
+# print(df1)
+#
+# df2=pandas.DataFrame([{"name":"john"},{"name":"jake"}])
+# print(df2)
+#
+# print(df1.mean())
+# print(df1.price.mean())
+#
+# df1=pandas.read_csv("supermarkets.csv")
+# print(df1.set_index("ID"))
 
-for i in lst:
-    print(i)
+# df2=pandas.read_excel("supermarkets.xlsx",sheet_name=0)
+# print(df2.set_index("ID"))
+#
+# df3=pandas.read_csv("https://pythonhow.com/supermarkets.csv")
+# print(df3)
+
+df4=pandas.read_json("https://pythonhow.com/supermarkets.json")
+print(df4)
