@@ -131,4 +131,20 @@ import pandas, numpy, xlrd
 # print(df3)
 
 df4=pandas.read_json("https://pythonhow.com/supermarkets.json")
+df4=df4.set_index("ID")
+#print(df4)
+
+#print(df4.iloc[1:3,1:3])
+
+#print(df4.ix[3,4])
+
+#print(df4.drop("City",1))
+
+#df4=df4.drop(df4.columns[0:3],1)
+
+df4["continent"]=df4.shape[0]*["North America"]
+df4["continent"]=df4["Country"]+","+"North America"
+
+
+
 print(df4)
