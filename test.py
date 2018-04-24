@@ -109,8 +109,10 @@
 #
 # for i in lst:
 #     print(i)
-
-import pandas, numpy, xlrd
+#
+# import pandas, numpy, xlrd, geopy
+# from geopy.geocoders import Nominatim
+# nom=Nominatim()
 #
 # df1=pandas.DataFrame([[2,4,6],[10,20,30]],columns=["price","age","value"],index=["first","second"])
 # print(df1)
@@ -130,9 +132,9 @@ import pandas, numpy, xlrd
 # df3=pandas.read_csv("https://pythonhow.com/supermarkets.csv")
 # print(df3)
 
-df4=pandas.read_json("https://pythonhow.com/supermarkets.json")
-df4=df4.set_index("ID")
-#print(df4)
+# df4=pandas.read_json("https://pythonhow.com/supermarkets.json")
+# df4=df4.set_index("ID")
+# #print(df4)
 
 #print(df4.iloc[1:3,1:3])
 
@@ -141,10 +143,26 @@ df4=df4.set_index("ID")
 #print(df4.drop("City",1))
 
 #df4=df4.drop(df4.columns[0:3],1)
+#
+# df4["continent"]=df4.shape[0]*["North America"]
+# df4["continent"]=df4["Country"]+","+"North America"
 
-df4["continent"]=df4.shape[0]*["North America"]
-df4["continent"]=df4["Country"]+","+"North America"
+#g=nom.geocode("3995 23rd St, San Francisco, CA 94114")
 
+# print(g.latitude)
+# print(g)
+#
+# df4["Address"]=df4["Address"]+", "+df4["City"]+", "+df4["State"]+", "+df4["Country"]
+# df4["Coordinates"]=df4["Address"].apply(nom.geocode)
+# df4["Latitude"]=df4["Coordinates"].apply(lambda x:x.latitude if x!= None else None)
+# df4["Longitude"]=df4["Coordinates"].apply(lambda x:x.longitude if x!= None else None)
+# #print(df4.Coordinates[1])
+# print(df4)
 
-
-print(df4)
+import numpy
+n=numpy.arange(27)
+r=n.reshape(3,9)
+e=n.reshape(3,3,3)
+print(e)
+m=numpy.asarray([[123,12,123,12,33],[],[]])
+print(m)
