@@ -167,10 +167,30 @@
 # m=numpy.asarray([[123,12,123,12,33],[],[]])
 # print(m)
 
-import cv2
+# import cv2, numpy
+#
+# im_g=cv2.imread("smallgray.png",0)
 
-im_g=cv2.imread("smallgray.png,1")
+# print(im_g)
+#
+# cv2.imwrite("newsmallgray.png",im_g)
 
-print(im_g)
+#print(im_g[0:2,2:4])
 
-cv2.imwrite("newsmallgray.png",im_g)
+# for i in im_g.T:
+#     print(i)
+
+# for i in im_g.flat:
+#     print(i)
+# ims=numpy.hstack((im_g,im_g))
+# print(ims)
+#
+# ims=numpy.vstack((im_g,im_g))
+# print(ims)
+#
+# lst=numpy.hsplit(ims,5)
+# print(lst)
+#
+# lst=numpy.vsplit(ims,3)
+# print(lst)
+
