@@ -159,10 +159,18 @@
 # #print(df4.Coordinates[1])
 # print(df4)
 
-import numpy
-n=numpy.arange(27)
-r=n.reshape(3,9)
-e=n.reshape(3,3,3)
-print(e)
-m=numpy.asarray([[123,12,123,12,33],[],[]])
-print(m)
+#import numpy
+# n=numpy.arange(27)
+# r=n.reshape(3,9)
+# e=n.reshape(3,3,3)
+# print(e)
+# m=numpy.asarray([[123,12,123,12,33],[],[]])
+# print(m)
+
+import cv2
+
+im_g=cv2.imread("smallgray.png,1")
+
+print(im_g)
+
+cv2.imwrite("newsmallgray.png",im_g)
